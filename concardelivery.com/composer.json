@@ -1,0 +1,11 @@
+{
+    "name": "eduardo/concardelivery.com",
+    "description": "Projeto do site da empresa Concar Delivery",
+    "authors": [
+        {
+            "name": "Eduardo Ribeiro",
+            "email": "joseribeiroejrs@ufu.br"
+        }
+    ],
+    "require": {}
+}

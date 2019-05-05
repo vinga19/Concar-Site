@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--Logo Página-->
+    <link rel="shortcut icon" href="img/logoConcar2.png" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--Import Css Customizado -->
+    <link rel="stylesheet" href="css/estilo.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Concar Delivery - Serviços Automotivos</title>
+    <meta name="author" content="Eduardo Ribeiro and Vitor Ribeiro">
+    <meta name="keywords" content="Concar, Concar Delivery, serviços automotivos, lavagem de carros, Concar Uberlândia, Concar Uberaba">
+    <meta content="Serviços Automotivos para o dia a dia de seu carro, sem você sair de casa ou trabalho." name="description">
+    <style type="text/css">
+    	/* #contratar{border-radius: 20px; background-color: rgba(70,130,180,0.7);}
+    	#entrar{border-radius: 20px; background-color: rgba(70,130,180,0.7);}
+        .textWhite{
+            color: white;
+        } */
+    </style>
+</head>
+<body>
+    <!--Barra de navegação -->
+    <nav>
+    	<div class="nav-wrapper black">
+        	<!--Alternando entre logo e nome da empresa para mobile e desktop-->
+            <a href="index.html" class="brand-logo hide-on-small-only"><img src="img/logoConcar.png" id="logo" alt="Logo da empresa Concar"></a>
+            <a href="index.html" class="brand-logo hide-on-med-and-up"><img src="img/logoConcar.png" id="logoMob" alt="Logo da empresa Concar"></a>
+        	<a href="index.html" class="brand-logo hide-on-small-only" style="margin-left: 55px">Concar</a>
+            <a href="index.html" class="brand-logo hide-on-med-and-up">Concar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons" style="font-size: 3rem;">menu</i></a>
+            <!--Menu para desktop-->
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+          		<li><a href="#vantagens" class="scrollSuave">Vantagens</a></li>
+                <li><a href="#facaParte" class="scrollSuave">Faça Parte</a></li>
+          		<li><a href="#faq" class="scrollSuave">Perguntas Frequentes</a></li>
+                <li class="active btnEntrar"><a href="#entrar" class="menuNav modal-trigger" id="entrarActive">Entrar</a></li>
+            </ul>
+            <!--
+                Menu lateral para Celulares 
+            -->
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#vantagens" class="scrollSuave">Vantagens</a></li>
+                <li><a href="#facaParte" class="scrollSuave">Faça Parte</a></li>
+                <li><a href="#faq" class="scrollSuave">Perguntas Frequentes</a></li>
+                <li><a class="waves-effect waves-light modal-trigger" href="#contratar">Cadastre-se</a></li>
+                <li><a class="waves-effect waves-light modal-trigger" href="#entrar" style="background-color: black; color: white;">Entrar</a></li>
+            </ul>           
+      	</div>
+    </nav>
+    <!--Parallax inicial -->
+    <section class="jumbotron" id="jumbo">
+	    <div class="container">
+	        <div class="row" id="primeiraParte">
+	            <div class="col s12 principal" id="principal">
+	                <h4 class="center descJumbotron">
+                        <b>Serviços Automotivos</b> para o dia a dia de seu carro, <b>sem você sair de casa</b> ou <b>trabalho</b>.
+                    </h4>
+                    <div class="col offset-m3 m6 s12">   
+                        <button class="waves-effect waves-light btnHome  modal-trigger" id="btnContratar" data-target="contratar">Contratar nossos serviços</button>
+                        <button class="waves-effect waves-light btnHome modal-trigger" id="btnTrabalhar" data-target="contratar">Trabalhe conosco</button>
+                    </div>
+                    <!-- Modal Structure 
+                         Cadastro Cliente!
+                    -->
+                    <div id="contratar" class="modal">
+                        <div class="modal-content">
+                          <h4 class="center">Crie sua conta</h4>
+                          <!--  onSubmit="return false" -->
+                          <form method="post" action="../src/cadastro.php" class="col s12 m6 offset-m3">
+                            <div class="input-field">
+                              <input type="text" id="nomeCont" name="nome" class="validate">
+                              <label for="nomeCont">Nome</label>
+                            </div>
+                            <div class="input-field">
+                              <input type="email" id="emailCont" name="email" class="validate">
+                              <label for="emailCont">Email</label>
+                            </div>
+                            <div class="input-field">
+                              <input type="password" id="senhaCont" class="validate" name="senha">
+                              <label for="senhaCont">Senha</label>
+                            </div>
+                            <div class="container">
+                                  <div class="row">
+                                      <div class="col s12 m8 offset-m2">
+                                          <!-- type="submit" -->
+                                          <button onclick="verificaCadastro()" type="submit" id="btnCadastro" class="modal-action modal-close waves-effect waves-green btn-flat center btnCadastrar">Cadastrar</button>
+                                      </div>
+                                  </div>
+                            </div>
+                          </form>
+                          <!-- <button onclick="verificaCadastro()" id="btnCadastro" class="modal-action waves-effect waves-green btn-flat center btnCadastrar" >Cadastrar</button> -->
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <a href="#entrar" class="modal-trigger modal-close col s12 possuiConta"><p class="center">Já possui uma conta?</p></a>
+                            </div>
+                        </div>
+                        <a href="#" target="_blanck">
+                            <button class="btnFace btnFaceCad waves-light waves-effect">
+                                <i class="fa fa-facebook-official fa-1x iFace" aria-hidden="true"></i> 
+                                <span class="cadFace">Cadastre-se com o Facebook</span>
+                            </button>
+                        </a>
+                        <a href="#" target="_blanck">
+                            <button class="btnGoogle waves-light waves-effect">
+                                <i class="fa fa-google-plus iGoogle" aria-hidden="true"></i> 
+                                <span class="cadGoogle">Cadastre-se com o Google</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- 
+                        #####################
+                        Cadastrar Funcionario
+                        #####################
+                    -->
+                    <!-- <div id="trabalhar" class="modal">
+                        <div class="modal-content">
+                          <h4 class="center">Trabalhe conosco</h4>
+                          <form action="#" class="col s12 m6 offset-m3">
+                            <div class="input-field">
+                              <input type="text" id="nome" class="validate">
+                              <label for="nome">Nome</label>
+                            </div>
+                            <div class="input-field">
+                              <input type="email" id="email" class="validate">
+                              <label for="email">Email</label>
+                            </div>
+                            <div class="input-field">
+                              <input type="password" id="senha" class="validate">
+                              <label for="senha">Senha</label>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                              <div class="col s12 m4 offset-m4">   
+                                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center btnCadastrar">Cadastrar</a>
+                              </div>
+                            </div>
+                        </div>
+                        <a href="#entrar" class="modal-trigger modal-close"><p class="center possuiConta">Já possui uma conta?</p></a>
+                        <a href="#" target="_blanck">
+                            <button class="btnFace btnFaceCad waves-light waves-effect">   
+                                <i class="fa fa-facebook-official fa-1x iFace" aria-hidden="true"></i> 
+                                <span class="cadFace">Cadastre-se com o Facebook</span>
+                            </button>
+                        </a>
+                        <a href="#" target="_blanck">
+                            <button class="btnGoogle waves-light waves-effect">
+                                <i class="fa fa-google-plus iGoogle" aria-hidden="true"></i> 
+                                <span class="cadGoogle">Cadastre-se com o Google</span>
+                            </button>
+                        </a>
+                    </div> -->
+                    <!-- 
+                        ##############
+                        ####ENTRAR####
+                        ##############
+                    -->
+                    <div id="entrar" class="modal">
+                        <div class="modal-content">
+                          <h4 class="center">Acesse sua conta</h4>
+                          <form action="../src/login.php" method="post" class="col s12 m6 offset-m3">
+                            <div class="input-field">
+                              <input type="text" id="nome" name="emailLogin" class="validate">
+                              <label for="nome">Email ou Nome de usuário</label>
+                            </div>
+                            <div class="input-field">
+                              <input type="password" id="senha" name ="senhaLogin" class="validate">
+                              <label for="senha">Senha</label>
+                            </div>
+                            <div class="container">
+                              <div class="row">
+                                 <div class="col s12 m8 offset-m2">
+                                    <button type="submit" class="modal-action modal-close waves-effect waves-green btn-flat center btnCadastrar">Entrar</button>
+                                 </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <!--<div class="container">-->
+                            <!--<div class="row">-->
+                              <!--<div class="col s12 m4 offset-m4">   -->
+                                  <!--<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat center btnCadastrar">Entrar</a>-->
+                              <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="container">
+                            <div class="row">
+                                <div class="center possuiConta esqCria col s12">
+                                    <p><a href="#contratar" class="modal-trigger modal-close">Criar uma conta</a> ·
+                                    <a href="#" class="modal-trigger modal-close">Esqueceu a senha?</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" target="_blanck">
+                            <button class="btnFace btnFaceCad waves-light waves-effect">
+                                <i class="fa fa-facebook-official fa-1x iFace" aria-hidden="true"></i>
+                                <span class="cadFace">Acessar com o Facebook</span>
+                            </button>
+                        </a>
+                        <a href="#" target="_blanck">
+                            <button class="btnGoogle waves-light waves-effect">
+
+                                <i class="fa fa-google-plus iGoogle" aria-hidden="true"></i>
+                                <span class="cadGoogle">Acessar com o Google</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="center row">
+                        <h5 class="saibaHome col s12 center">saiba mais</h5>
+                        <a href="#vantagens" class="scrollSuave"><i class="material-icons setaAnimada col s12 center">arrow_downward</i></a>
+                    </div>
+                </div>
+	        </div>
+	    </div>
+	</section>
+    
+    <!--Ícones vantagens -->
+    <section id="vantagens">
+        <div class="container">
+            <div class="row">
+                <h2 class="center col s12" style="font-weight: 500; color: #424242;">Vantagens</h2>
+                <h5 class="center col s12" style="margin-top: 0; font-weight: 300; color: #757575;">
+                    Não fique para trás, conheça tudo que a <b>Concar</b> pode oferecer
+                </h5>  
+                <div class="col s12 m4 vantagem">
+                    <img src="img/carro2.png" alt="Carro do cliente" class="center" style="margin-left: 30%;">
+                    <h4 class="center tituloVantagens">Seu carro em boas mãos</h4>
+                    <p class="center descVantagens">
+                        <b>Com a Concar você pode confiar</b>, contamos com profissionais capacitados e de alta confiança.
+                    </p>
+                </div>
+                <div class="col s12 m4 vantagem">
+                    <img src="img/conta2.png" alt="Conta do cliente" class="center" style="margin-left: 30%;">
+                    <h4 class="center tituloVantagens">Sem surpresas na conta</h4>
+                    <p class="center descVantagens">
+                        Aqui <b>não tem pegadinha</b>, você sabe exatamente quanto vai gastar.
+                    </p>
+                </div>
+                <div class="col s12 m4 vantagem" style="margin-bottom: 100px;">
+                    <img src="img/relaxamento2.png" alt="Sem stress" class="center imgVantagem">
+                    <h4 class="center tituloVantagens">Sem Stress</h4>
+                    <p class="center descVantagens">
+                        Nós <b>vamos até você</b>. Ganhe tempo extra com a família, amigos ou até mesmo enquanto trabalha.
+                    </p>
+                </div>
+                <div class="col s12 m4 vantagem">
+                    <img src="img/copoDAgua2.png" alt="Economizando Água" class="center imgVantagem">
+                    <h4 class="center tituloVantagens">Lavagem Ecológica</h4>
+                    <p class="center descVantagens">
+                        Economia de até <b>500 litros</b> de água em nossa lavagens a seco, ajudamos assim, juntamente com <b>você</b> a
+                        preservar o meio ambiente.
+                    </p>
+                </div>
+                <div class="col s12 m4 vantagem">
+                    <img src="img/tablet2.png" alt="Tudo a um clique" class="center imgVantagem">
+                    <h4 class="center tituloVantagens">Tudo a um clique</h4>
+                    <p class="center descVantagens">
+                        É muito fácil solicitar nossos serviços, seja através do site ou de um dos nossos aplicativos
+                    </p>
+                </div>
+                <div class="col s12 m4 vantagem">
+                    <img src="img/sorriso2.png" alt="Cliente Satisfeito" class="center imgVantagem">
+                    <h4 class="center tituloVantagens">Satisfação Garantida</h4>
+                    <p class="center descVantagens">
+                        Quem usa aprova, nosso objetivo é sempre realizar um trabalho de excelência.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="facaParte">
+        <div class="container">
+            <div class="row">
+                <h2 class="center facaParteTitulo">Faça Parte</h2>
+                <p class="center">  
+                    <i class="material-icons large" style="font-size: 12rem; color: white;">person_pin_circle</i>
+                </p>
+                <h5 class="col center s12 offset-m2 m8" style="font-weight: 300; color: white;">
+                    Nossos profissionais são treinados e avaliados, garantindo assim um serviço de excelência
+                </h5>
+                <div class="col center s12 offset-m4 m4" class="divBtnConcarrista" style="margin-top: 20px; margin-bottom: 40px;">   
+                    <button class="btnConcarrista waves-light waves-effect modal-trigger" data-target="contratar">
+                        Torne-se um Concarrista
+                    </button>
+                    <button class="btnConcarrista waves-light waves-effect modal-trigger" id="agendeAgora" style="margin-top: 10px;" 
+data-target="contratar">
+                        Agende agora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pad-section" id="faq">
+        <div class="container perguntas">
+            <div class="row">
+                <div class="col s12">   
+                    <h2 class="pad-section perguntasTitulo">
+                        Perguntas Frequentes
+                    </h2>
+                </div>
+                <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">
+                                <h5>Quem somos?</h5>
+                            </div>
+                            <div class="collapsible-body">
+                                <blockquote>
+                                    A Concar veio para revolucionar a maneira como as pessoas se relacionam com seus carros. Especialista em inovação e tecnologia no setor automotivo, a Concar já viajou o mundo trazendo pra você tecnologias de ponta para tratamentos automotivos como lavagens, polimentos, higienizações, proteções, hidratações e muito mais. Valorizando cada detalhe seu, proporcionamos a melhor experiência que você já teve com a beleza de seu carro!
+                                </blockquote>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <h5>Por que escolher a Concar?</h5>
+                            </div>
+                            <div class="collapsible-body">
+                                <blockquote>
+                                    Você não precisa mais enfrentar filas, confiar em produtos agressivos, profissionais não qualificados ou sair de sua casa com o risco de qualquer acidente para fazer serviços automotivos, nós levamos até você os melhores profissionais, rigorosamente inspecionados e avaliados, para te proporcionar a melhor experiência conosco, onde o seu carro estiver.
+                                </blockquote>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <h5>Como posso entrar em contato?</h5>
+                            </div>
+                            <div class="collapsible-body">
+                                <blockquote> 
+                                    Você pode entrar em contato pelo número <b>(34) 99772-1545</b>, logar em nosso site ou baixar um de nossos aplicativos, além de entrar em contato diretamente em uma de nossas redes sociais.
+                                </blockquote>
+                                <button class="btnFace btnFac">
+                                    <a href="https://www.facebook.com/concardelivery/" target="_blanck">
+                                        <i class="fa fa-facebook-official fa-2x " aria-hidden="true" style="color: white;"></i> 
+                                        <span style="font-size: 2rem; font-weight: 300; color: white;">Facebook</span>
+                                    </a>
+                                </button>
+                                <button class="btnWhats btnWhat">
+                                    <a href="https://api.whatsapp.com/send?phone=5534997721545&text=Quero%20lavar%20meu%20carro" target="_blanck">
+                                        <i class="fa fa-whatsapp fa-2x " aria-hidden="true" style="color: white;"></i> 
+                                        <span style="font-size: 2rem; font-weight: 300; color: white;">Whatsapp</span>
+                                    </a>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row"> 
+          <div class="col l6 s12">
+            <h5 class="white-text center">
+                Estamos presentes em Uberlândia e Uberaba
+            </h5>
+            <h6 class="white-text center" style="font-size: 1.2rem;">
+                Atendimento 24 horas
+            </h6>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text center">Entre em contato</h5>
+            <p class="grey-text text-lighten-4 center" style="margin-top: -7px;">
+                <button class="btnWhats btnFooter">
+                    <a href="https://api.whatsapp.com/send?phone=5534997721545&text=Quero%20lavar%20meu%20carro" target="_blanck">
+                        <i class="fa fa-whatsapp fa-2x " aria-hidden="true" style="color: white;"></i>
+                    </a>
+                </button>
+                <button class="btnFace btnFooter">
+                    <a href="https://www.facebook.com/concardelivery/" target="_blanck">
+                        <i class="fa fa-facebook-official fa-2x " aria-hidden="true" style="color: white;"></i> 
+                    </a>
+                </button>
+                <br/>
+                <span style="font-size: 1.5rem; margin-top: 7px;" class="center">       (34) 99772-1545
+                </span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright grey darken-4">
+        <div class="container center">
+            © 2017 Concar
+        </div>
+      </div>
+    </footer>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/estilo.js"></script>
+    <script>
+        //Rolagem suave
+        var $doc = $('html, body');
+        $('.scrollSuave').click(function() {
+            $doc.animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 750);
+            return false;
+        });
+        $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrainWidth: false, // Does not change width of dropdown to that of the activator
+          hover: true, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: false, // Displays dropdown below the button
+          alignment: 'left', // Displays dropdown with edge aligned to the left of button
+          stopPropagation: false // Stops event propagation
+        });
+        $(".button-collapse").sideNav();
+         $(document).ready(function(){
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+          });
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){    
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5a16e76ebb0c3f433d4cadc6/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>

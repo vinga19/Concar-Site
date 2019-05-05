@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      	<!--Import Google Icon Font-->
+      	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      	<!--Import materialize.css-->
+      	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      	<!--Let browser know website is optimized for mobile-->
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Concar Delivery</title>
+		
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+		
+
+    <style type="text/css">
+    	#cliente{height: 150px;width: 150px; margin-left: 35px}
+    	#cidade{height: 300px;width: 350px}
+    	#logo{height: 60px;width: 60px}
+    	
+    </style>
+
+    </head>
+    <body>
+    	<nav>
+		    <div class="nav-wrapper white">
+		      <a href="#" class="brand-logo center"  ><img src="img/logoConcar2.png" id="logo"></a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down indigo darken-4">
+		        <li><form action="file:///C:/Users/Z%C3%A9%20Twist/Desktop/Concar-Sites/concardelivery.com/public/index.html" method="get" class="red-text"><input type="submit" value="Site Concar"/></form>
+		        <li><a href="badges.html">Agenda</a></li>
+		        <li><a href="collapsible.html">Ajuda</a></li>
+  			
+		      </ul>
+		    </div>
+		</nav>
+		  <ul id="slide-out" class="side-nav fixed">
+    		<li><div class="user-view">
+      		<div class="background">
+        		<img src="img/background03.jpg" id="cidade">
+      	    </div>
+      		<a href="#!user"><img class="circle" src="img/cliente.png" id="cliente"></a>
+      		<a href="#!name"><span class="white-text name">Jhonatta Gomes</span></a>
+      		<a href="#!email"><span class="white-text email">concardelivery@gmail.com</span></a>
+      		<a href="#!name"><span class="blue-text email">Diretor</span></a>
+    		</div></li>
+    		<li><a href="#!"><i class="material-icons">home</i>inicio</a></li>
+    		<li><a href="#!"><i class="material-icons">fingerprint</i>Perfil</a></li>
+    		<li><a href="#!"><i class="material-icons">attach_money</i>Faturamento</a></li>
+    		<li><a href="#!"><i class="material-icons">content_paste</i>Concarristas</a></li>
+    		<li><a href="#!"><i class="material-icons">time_to_leave</i>Configurações</a></li>
+    		<li><a href="#!">.Facebook</a></li>
+    		<li><a href="#!">.Twitter</a></li>
+    		<li><a href="#!">.Instagran</a></li>
+    		
+
+  		</ul>
+  			<a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons">menu</i></a>
+  			<div id="container"></div>
+
+  			<div>
+  				<canvas class="line-chart" ></canvas>
+
+
+			
+
+
+		
+		
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="../../code/modules/series-label.js"></script>
+	  <script src="../../code/modules/exporting.js"></script>
+	  
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script type="text/javascript">
+      	$(".dropdown-button").dropdown();
+      	$(".button-collapse").sideNav();
+		var ctx=document.getElementByclassName("line-chart")  ;
+		//type,Date e options
+		var meugrafico= new chart(ctx,{
+			type:'line',
+			Date:{
+				labels:["Setembro","Outubro","Novembro","Dezembro"],
+				datasets:
+
+			}
+
+		});
+
+		</script>
+     
+    </body>
+  </html>
+        

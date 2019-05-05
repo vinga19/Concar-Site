@@ -1,0 +1,105 @@
+<!--Perfil-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style type="text/css">
+      	#cadastro{height: 500px;width: 500px;margin-top: 150px;}
+      	#first_name4{width: 100px}
+      	#first_name3{width: 200px}
+      	#first_name1{width: 375px}
+      	#fundo{background-image: url(background03.jpg);
+      			background-repeat: no-repeat;
+      			background-size: ;
+      			bottom: 0;
+      			color: black;
+      			left:-45px;
+      			top: -45px;
+      			overflow: auto;	
+      			position: absolute;
+      			right: 0;
+      			text-align: center;
+      			height: 800px;
+      			width:1395px;
+      			}
+		
+      	#logo{background-image: url(empresa.jpg);
+      			background-repeat: no-repeat;
+      			background-size: 100%;
+      			bottom: 0;
+      			color: black;
+      			left: 500px;
+      			overflow: auto;	
+      			padding: 3em;
+      			position: absolute;
+      			right: 0;
+      			text-align: center;
+      			top:0;
+      			height:250px;
+      			width: 250px; }
+      </style>
+</head>
+<body>
+			<img src="img/background03.jpg" class="fixed" id="fundo">
+			<img src="img/logoConcar.png" id="logo">
+			<div class="row" class="input-field" id="cadastro">
+				
+			    <form class="col s12">
+			      <div class="row">
+					<div class="input-field col s16 ">
+				      <input  id="first_name1" type="text" class="validate ">
+				      <label class="active " for="first_name2">Nome completo:</label>
+			        </div>
+			        <form action="#">
+				    <p>
+				      <input name="group1" type="radio" id="test1" />
+				      <label for="test1">Masc</label>
+				    </p>
+				    <p>
+				      <input name="group1" type="radio" id="test2" />
+				      <label for="test2">Fem</label>
+				    </p>
+			        <div class="input-field col s12">
+				      <input  id="first_name2" type="text" class="validate">
+				      <label class="active" for="first_name2">Email:</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col 12">
+				     <input  id="first_name3" type="text" class="validate">
+				      <label class="active" for="first_name2">CPF/CNPJ:</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			      <div class="input-field col s12">
+				   <input  id="first_name4" type="text" class="validate">
+				      <label class="active" for="first_name2">Tel/cel:</label>
+			      </div>
+			       
+				  </form>
+			    </form>
+			  </div>
+
+
+
+
+
+
+<!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript">
+      	$(document).ready(function() {
+    	Materialize.updateTextFields();
+  		});
+  		.input-field
+      	
+      </script>
+</body>
+</html>
